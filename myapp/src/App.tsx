@@ -1,20 +1,27 @@
-import './App.css'
+import './App.css';
 
-import { Canvas } from '@react-three/fiber'
-import { Box } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber';
+import { Html } from '@react-three/drei';
 
-
-function App () {
-
+function App() {
   return (
-    <Canvas>
-    <ambientLight intensity={Math.PI / 2} />
-    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-    <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-    <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.2, 0, 0]} />
-  </Canvas>
-  )
+    <div style={{ height: '100vh', width: '100vw', position: 'relative' }}>
+      <Canvas camera={{ position: [0, 0, 22.5] }}>
+        <Html
+          fullscreen
+          style={{ userSelect: 'none' }}
+          castShadow
+          receiveShadow
+        >
+          <iframe
+            width={'100%'}
+            height={'100%'}
+            src="https://www.tmaxmetaai.com/aboutus"
+          ></iframe>
+        </Html>
+      </Canvas>
+    </div>
+  );
 }
 
-export default App
+export default App;
