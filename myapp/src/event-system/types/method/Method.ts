@@ -1,5 +1,5 @@
 interface Method<T> {
-  name: string;
+  type: string;
   parameters: T;
 }
 

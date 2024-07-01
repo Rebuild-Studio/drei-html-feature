@@ -11,7 +11,7 @@ type ParameterSetObjectPosition = MethodParameter<
   [string, THREE.Vector3 | { x: number; y: number; z: number }]
 >;
 interface MethodSetObjectPosition extends Method<ParameterSetObjectPosition> {
-  name: 'setObjectPosition';
+  type: 'setObjectPosition';
 }
 
 /**
@@ -23,7 +23,7 @@ type ParameterSetObjectRotation = MethodParameter<
   [string, THREE.Vector3 | { x: number; y: number; z: number }]
 >;
 interface MethodSetObjectRotation extends Method<ParameterSetObjectRotation> {
-  name: 'setObjectRotation';
+  type: 'setObjectRotation';
 }
 
 /**
@@ -33,7 +33,7 @@ interface MethodSetObjectRotation extends Method<ParameterSetObjectRotation> {
  */
 type ParameterChangeScene = MethodParameter<[string, boolean]>;
 interface MethodChangeScene extends Method<ParameterChangeScene> {
-  name: 'changeScene';
+  type: 'changeScene';
 }
 
 type ConcreteMethod =
